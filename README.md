@@ -9,6 +9,7 @@ Note that in my fork, the html/css and fonts/colors may have changed a lot from 
 
 Installation instructions:
 * Extract the tar ball in the /var/www/html directory of your OP5 Monitor server.
+* You can put the files on the another server as well as long as it can reach the op5 monitor server using https - if you do, don´t forget to update the op5server variable at the top of the config.php file.
 * Make sure your user has API access permission.
 * Go to yourserver/bigscreen in your browser.
 * If you use Active Directory authentication you need to edit the login.php file and update the authtype select box and add your domain there.
