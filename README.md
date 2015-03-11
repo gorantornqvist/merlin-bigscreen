@@ -19,5 +19,6 @@ http://yourserver/bigscreen/?warnings=false&amp;unknowns=false&amp;nosla=false
 The "nosla" option is used to filter out hosts or services which have a custom variable "_SLA" set to the value "none".
 
 You may also use autologin as a start page in a web browser by using url: http://yourserver/bigscreen/login.php?redir=index.php&autologin=true&username=youruser&password=yourpassword
+
 If you want to include filtering options in the redir, you need to urlencode them according to this example:
 ?redir=index.php%3Funknowns=false%26warnings=false&autologin...
