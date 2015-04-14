@@ -1,6 +1,7 @@
 <?php
 session_start();
 require "./config.php";
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 $ret = IsLoggedOn();
 if ($ret == FALSE) {
@@ -46,7 +47,7 @@ if ($_GET['nosla'] == "false")
             </tr>
 <?php
 $xml = GetUnhandledHostProblems();
-
+if ($xml != FALSE) {
 foreach ($xml->param as $row) {
   $skiprow = false;
 
@@ -90,6 +91,7 @@ foreach ($xml->param as $row) {
     ";
    }
 }
+}
 ?>
         </table>
     </div>
@@ -124,7 +126,7 @@ foreach ($xml->param as $row) {
             </tr>
 <?php
 $xml = GetUnhandledServiceProblems();
-
+if ($xml != FALSE) {
 foreach ($xml->param as $row) {
   $skiprow = false;
 
@@ -188,6 +190,7 @@ foreach ($xml->param as $row) {
                   </tr>
     ";
   }
+}
 }
 ?>
         </table>
