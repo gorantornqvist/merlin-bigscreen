@@ -1,6 +1,7 @@
 <?php 
 session_start();
 require "./config.php";
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 $ret = IsLoggedOn();
 if ($ret == FALSE) {
