@@ -1,6 +1,7 @@
 <?php
 session_start();
 require "./config.php";
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 if (strlen($_GET['redir']) == 0 && strlen($_POST['redir']) == 0) {
   die("This page should only be accessed using links from OP5 Monitor!");
