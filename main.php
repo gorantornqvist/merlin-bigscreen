@@ -60,8 +60,8 @@ foreach ($xml->param as $row) {
 
   $output = $row->value[3];
 
-  $laststatechange = gmdate("Y-m-d H:i", intval($row->value[4]));
-  $lastcheck = gmdate("Y-m-d H:i", intval($row->value[5]));
+  $laststatechange = date("Y-m-d H:i", intval($row->value[4]));
+  $lastcheck = date("Y-m-d H:i", intval($row->value[5]));
 
   $arrhostvarnames = $row->value[6];                                                                                                                                                 
   $arrhostvarvalues = $row->value[7];                                                                                                                                                
@@ -174,8 +174,8 @@ foreach ($xml->param as $row) {
 
   $output = $row->value[3];
 
-  $laststatechange = gmdate("Y-m-d H:i", intval($row->value[4]));
-  $lastcheck = gmdate("Y-m-d H:i", intval($row->value[5]));
+  $laststatechange = date("Y-m-d H:i", intval($row->value[4]));
+  $lastcheck = date("Y-m-d H:i", intval($row->value[5]));
 
   if (!$skiprow) {
 
